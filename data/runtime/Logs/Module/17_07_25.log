@@ -1,0 +1,618 @@
+[ 2017-07-25T19:09:36+08:00 ] 127.0.0.1 /index.php?g=Module&m=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_plugins` [ RunTime:0.0010s ]
+SQL: SELECT `name`,`hooks` FROM `cmf_plugins` WHERE ( status=1 )  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:-0.004000s ]
+NOTIC: [8] Constant TMPL_PATH already defined D:\www\thinkcmfxapi\application\Common\Controller\AdminbaseController.class.php 第 23 行.
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Menu' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_attribute` WHERE ( model_id=11 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p D:\www\thinkcmfxapi\application\Module\Controller\ListController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `action`,`id`,`name` FROM `cmf_menu` ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_menu` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0010s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: taxonomys D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 60 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=203 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-07-25T19:09:55+08:00 ] 127.0.0.1 /index.php?g=Module&m=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:-0.015000s ]
+NOTIC: [8] Constant TMPL_PATH already defined D:\www\thinkcmfxapi\application\Common\Controller\AdminbaseController.class.php 第 23 行.
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Menu' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_attribute` WHERE ( model_id=11 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\www\thinkcmfxapi\application\Module\Controller\ListController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `action`,`id`,`name` FROM `cmf_menu` ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_menu` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0010s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: taxonomys D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 60 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=203 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=202 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=201 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=200 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=199 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=198 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=197 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=196 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=195 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=193 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+NOTIC: [8] Undefined variable: posts D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 105 行.
+NOTIC: [8] Undefined variable: formget D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 191 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T19:10:31+08:00 ] 127.0.0.1 /index.php?g=Module&m=Model&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Model' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0000s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ONETHINK_VERSION - assumed 'ONETHINK_VERSION' D:\www\thinkcmfxapi\data\runtime\Cache\Module\613adc1e146d822a851a5b452289e187.php 第 108 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T19:10:33+08:00 ] 127.0.0.1 /index.php?g=Module&m=model&a=edit&id=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Model' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0010s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 99 行.
+NOTIC: [8] Use of undefined constant ONETHINK_VERSION - assumed 'ONETHINK_VERSION' D:\www\thinkcmfxapi\data\runtime\Cache\Module\5252f9378f1996790a3cb0eedaa132cf.php 第 201 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T19:10:43+08:00 ] 127.0.0.1 /index.php?g=Module&m=Model&a=update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Model' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate D:\www\thinkcmfxapi\simplewind\Core\Library\Think\Model.class.php 第 1192 行.
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'menu' AND `id` <> '11' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto D:\www\thinkcmfxapi\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `cmf_model` SET `name`='menu',`title`='menu',`extend`='0',`attribute_alias`='',`field_group`='1:基础',`field_sort`='{\"1\":[\"77\",\"78\",\"79\",\"80\",\"81\",\"82\",\"83\",\"84\",\"85\",\"86\",\"87\"]}',`list_grid`='id|echostatus:操作|[id]:[EDIT],[DELETE]&ction=[action]|删除,index&id=[id]|[name],[id]',`search_key`='',`search_list`='',`template_list`='',`template_add`='',`template_edit`='',`list_row`='10',`update_time`='1500981043',`attribute_list`='' WHERE `id` = 11 [ RunTime:0.0000s ]
+NOTIC: [2] unlink(D:\www\thinkcmfxapi/data/runtime/Temp/8badceef8761e1f2fa41d8bf7e2cdf39.php): No such file or directory D:\www\thinkcmfxapi\simplewind\Core\Library\Think\Cache\Driver\File.class.php 第 157 行.
+NOTIC: [8] Use of undefined constant UID - assumed 'UID' D:\www\thinkcmfxapi\application\Module\Model\ModelModel.class.php 第 76 行.
+SQL: SHOW COLUMNS FROM `cmf_action` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_action` WHERE `name` = 'update_model' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-07-25T19:10:44+08:00 ] 127.0.0.1 /index.php?g=Module&m=Model&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Model' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0010s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ONETHINK_VERSION - assumed 'ONETHINK_VERSION' D:\www\thinkcmfxapi\data\runtime\Cache\Module\613adc1e146d822a851a5b452289e187.php 第 108 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T19:10:46+08:00 ] 127.0.0.1 /index.php?g=Module&m=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:-0.023000s ]
+NOTIC: [8] Constant TMPL_PATH already defined D:\www\thinkcmfxapi\application\Common\Controller\AdminbaseController.class.php 第 23 行.
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Menu' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `cmf_attribute` WHERE ( model_id=11 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\www\thinkcmfxapi\application\Module\Controller\ListController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `action`,`id`,`name` FROM `cmf_menu` ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_menu` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0000s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: taxonomys D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 60 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=203 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 461 行.
+
+[ 2017-07-25T19:11:26+08:00 ] 127.0.0.1 /index.php?g=Module&m=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:-0.013000s ]
+NOTIC: [8] Constant TMPL_PATH already defined D:\www\thinkcmfxapi\application\Common\Controller\AdminbaseController.class.php 第 23 行.
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Menu' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_attribute` WHERE ( model_id=11 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\www\thinkcmfxapi\application\Module\Controller\ListController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `action`,`id`,`name` FROM `cmf_menu` ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_menu` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0010s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: taxonomys D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 60 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=203 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-07-25T19:11:44+08:00 ] 127.0.0.1 /index.php?g=Module&m=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:-0.026000s ]
+NOTIC: [8] Constant TMPL_PATH already defined D:\www\thinkcmfxapi\application\Common\Controller\AdminbaseController.class.php 第 23 行.
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Menu' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_attribute` WHERE ( model_id=11 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\www\thinkcmfxapi\application\Module\Controller\ListController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `action`,`id`,`name` FROM `cmf_menu` ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_menu` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0010s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: taxonomys D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 60 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=203 ) LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2017-07-25T19:12:51+08:00 ] 127.0.0.1 /index.php?g=Module&m=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.001000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:-0.014000s ]
+NOTIC: [8] Constant TMPL_PATH already defined D:\www\thinkcmfxapi\application\Common\Controller\AdminbaseController.class.php 第 23 行.
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Menu' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_attribute` WHERE ( model_id=11 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\www\thinkcmfxapi\application\Module\Controller\ListController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `action`,`id`,`name` FROM `cmf_menu` ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_menu` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0010s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: taxonomys D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 60 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=203 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant links - assumed 'links' D:\www\thinkcmfxapi\application\Module\Common\function.php 第 422 行.
+
+[ 2017-07-25T19:13:23+08:00 ] 127.0.0.1 /index.php?g=Module&m=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:-0.068000s ]
+NOTIC: [8] Constant TMPL_PATH already defined D:\www\thinkcmfxapi\application\Common\Controller\AdminbaseController.class.php 第 23 行.
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Menu' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_attribute` WHERE ( model_id=11 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\www\thinkcmfxapi\application\Module\Controller\ListController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `action`,`id`,`name` FROM `cmf_menu` ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_menu` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0000s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: taxonomys D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 60 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=203 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-07-25T19:14:43+08:00 ] 127.0.0.1 /index.php?g=Module&m=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:-0.015000s ]
+NOTIC: [8] Constant TMPL_PATH already defined D:\www\thinkcmfxapi\application\Common\Controller\AdminbaseController.class.php 第 23 行.
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Menu' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_attribute` WHERE ( model_id=11 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p D:\www\thinkcmfxapi\application\Module\Controller\ListController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `action`,`id`,`name` FROM `cmf_menu` ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_menu` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0010s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: taxonomys D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 60 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=203 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 463 行.
+
+[ 2017-07-25T19:15:00+08:00 ] 127.0.0.1 /index.php?g=Module&m=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:-0.009000s ]
+NOTIC: [8] Constant TMPL_PATH already defined D:\www\thinkcmfxapi\application\Common\Controller\AdminbaseController.class.php 第 23 行.
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE ( name='Menu' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cmf_attribute` WHERE ( model_id=11 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\www\thinkcmfxapi\application\Module\Controller\ListController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `cmf_model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `action`,`id`,`name` FROM `cmf_menu` ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_menu` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `cmf_model` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cmf_attribute` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `cmf_attribute` WHERE `model_id` = 11  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `cmf_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0010s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: taxonomys D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 60 行.
+NOTIC: [8] Undefined index: listorder D:\www\thinkcmfxapi\data\runtime\Cache\Module\9cae315bf10e2e4862d1485237ab8151.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_menu` WHERE ( id=203 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\www\thinkcmfxapi\application\Module\Common\function.php 第 464 行.
+

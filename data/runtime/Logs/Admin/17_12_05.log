@@ -1,0 +1,29 @@
+[ 2017-12-05T19:46:30+08:00 ] 127.0.0.1 /index.php?g=admin&m=public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.151008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.157009s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.024002s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.253014s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.020001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.297017s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.058003s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.058003s ]
+SQL: SHOW COLUMNS FROM `cmf_options` [ RunTime:0.0120s ]
+SQL: SELECT `option_value` FROM `cmf_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.114007s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.115007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.192011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.192011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+

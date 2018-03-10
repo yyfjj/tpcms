@@ -1,0 +1,506 @@
+<admintpl file="header" />
+<style type="text/css">
+.pic-list li {
+	margin-bottom: 5px;
+}
+</style>
+
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U($model['name'].'/index')}">{$model['title']}列表</a></li>
+			<li><a href="{:U($model['name'].'/add',array('model'=>$model['id']))}" target="_self">添加{$model['title']}</a></li>
+			<li class="active"><a href="javascript:void(0);">修改{$model['title']}</a></li>
+		</ul>
+		<form action='{:U("$modelName/edit",array("model"=>$model["id"]))}' method="post" class="form-horizontal js-ajax-form" enctype="multipart/form-data">
+			<input type="hidden" name="id" value="{$data.id}">
+			<div class="row-fluid">
+				<div class="span9">
+					<table class="table table-bordered">
+					<php>
+						//dump($fields[1]);
+						//dump($data);
+					</php>
+						<volist name="fields[1]" id="field">
+              				<if condition="$field['is_show'] == 1 || $field['is_show'] == 3">
+								<tr>
+									<switch name="field.type">
+										<case value="num">
+											<th>{$field['title']}</th>
+											<td>
+												<input type="text" style="width:400px;" name="{$field.name}" id="{$field.name}" required value="{$data[$field['name']]}" placeholder="<notempty name="field['remark']">（{$field['remark']}）</notempty>"/>
+												<span class="form-required">*</span>
+											</td>
+										</case>
+										<case value="string">
+											<th>{$field['title']}</th>
+											<td>
+												<input type="text" style="width:400px;" name="{$field.name}" id="{$field.name}" required value="{$data[$field['name']]}" placeholder="<notempty name="field['remark']">（{$field['remark']}）</notempty>"/>
+												<span class="form-required">*</span>
+											</td>
+										</case>
+										<case value="textarea">
+											<th>{$field['title']}</th>
+											<td>
+												<textarea name="{$field.name}" id="{$field.name}" style="width: 98%; height: 50px;" placeholder="<notempty name="{field['remark']}">（{$field['remark']}）</notempty>">{$data[$field['name']]}</textarea>
+											</td>
+										</case>
+										<case value="date">
+											<th>{$field['title']}</th>
+											<td>
+												<input type="text" name="{$field.name}" id="{$field.name}" value="{$data[$field['name']]|date='Y-m-d H:i',###}" style="width: 400px" placeholder="请选择日期"  class="js-datetime" style="width: 160px;">
+											</td>
+										</case>
+										<case value="datetime">
+											<th>{$field['title']}</th>
+											<td>
+												<input type="text" name="{$field.name}" id="{$field.name}" value="{$data[$field['name']]|date='Y-m-d H:i:s',###}" style="width: 400px" placeholder="请选择时间"  class="js-datetime" style="width: 160px;">
+											</td>
+										</case>
+										<case value="bool">
+											<th>{$field['title']}</th>
+											<td>
+												<select name="{$field.name}">
+													<volist name=":parse_field_attr($field['extra'])" id="vo">
+														<option value="{$key}" <eq name="data[$field['name']]" value="$key">selected</eq>>{$vo}</option>
+													</volist>
+												</select>
+											</td>
+										</case>
+										<case value="select">
+											<th>{$field['title']}</th>
+											<td>
+												<select name="{$field.name}">
+													<volist name=":parse_field_attr($field['extra'])" id="vo">
+														<option value="{$key}" <eq name="data[$field['name']]" value="$key">selected</eq>>{$vo}</option>
+													</volist>
+												</select>
+											</td>
+										</case>
+										<case value="radio">
+											<th>{$field['title']}</th>
+											<td>
+												<volist name=":parse_field_attr($field['extra'])" id="vo">
+													<label class="radio">
+													<input type="radio" value="{$key}" name="{$field.name}" <eq name="data[$field['name']]" value="$key">checked="checked"</eq>>{$vo}
+													</label>
+												</volist>
+											</td>
+										</case>
+										<case value="checkbox">
+											<th>{$field['title']}</th>
+											<td>
+												<volist name=":parse_field_attr($field['extra'])" id="vo">
+													<label class="checkbox">
+													<input type="checkbox" value="{$key}" name="{$field.name}[]" <in name="key" value="$data[$field['name']]" >checked="checked"</in>>{$vo}
+													</label>
+												</volist>
+											</td>
+										</case>
+										<case value="editor">
+											<th>{$field['title']}</th>
+											<td>
+												<script type="text/plain" id="{$field.name}" name="{$field.name}">{$data[$field['name']]}</script>
+											</td>
+										</case>
+										<case value="picture">
+											<th>{$field['title']}</th>
+											<td>
+												<notempty name="data[$field['name']]">
+													<php>
+														$tmp = json_decode($data[$field['name']],true);
+													</php>
+													<foreach name="tmp" item="vo">
+														<li id="savedimage{$key}">
+															<input id="{$field.name}-{$key}" type="hidden" name="{$field.name}[]" value="{$vo.url}"> 
+															<input id="{$field.name}-{$key}-name" type="text" name="{$field.name}_alt[]" value="{$vo.alt}" style="width: 200px;" title="图片名称">
+										<img id="{$field.name}-{$key}-preview" src="{:sp_get_image_preview_url($vo['url'])}" style="height:36px;width: 36px;" onclick="parent.image_preview_dialog(this.src);">
+															<a href="javascript:upload_one_image('图片上传','#{$field.name}-{$key}');">替换</a>
+															<a href="javascript:(function(){ $('#savedimage{$key}').remove();})();">移除</a>
+														</li>
+													</foreach>
+												</notempty>
+												</notempty>
+											
+												<script type="text/html" id="photos-item-wrapper">
+													<li id="savedimage{id}">
+														<input id="photo-{id}" type="hidden" name="{$field.name}[]" value="{filepath}"> 
+														<input id="photo-{id}-name" type="text" name="{$field.name}_alt[]" value="{name}" style="width: 160px;" title="图片名称">
+														<img id="photo-{id}-preview" src="{url}" style="height:36px;width: 36px;" onclick="parent.image_preview_dialog(this.src);">
+														<a href="javascript:upload_one_image('图片上传','#photo-{id}');">替换</a>
+														<a href="javascript:(function(){$('#savedimage{id}').remove();})();">移除</a>
+													</li>
+												</script>
+												<ul id="photos" class="pic-list unstyled"></ul>
+												<a href="javascript:upload_multi_image('图片上传','#photos','photos-item-wrapper');" class="btn btn-small">选择图片</a>
+											</td>
+										</case>
+										<case value="file">
+											<th>{$field['title']}</th>
+											<td>
+												<notempty name="data[$field['name']]">
+													<php>
+														$tmp = json_decode($data[$field['name']],true);
+													</php>
+													<foreach name="tmp" item="vo">
+														<li id="savedimage{$key}">
+															<input id="{$field.name}-{$key}" type="hidden" name="{$field.name}[]" value="{$vo.url}"> 
+															<input id="{$field.name}-{$key}-name" type="text" name="{$field.name}_alt[]" value="{$vo.alt}" style="width: 200px;" title="图片名称">
+										<a   id="{$field.name}-{$key}-preview" href="{:sp_get_image_preview_url($vo['url'])}" onclick="parent.file_preview_dialog(this.href);">{$vo.alt}</a>
+															<a href="javascript:upload_one_image('图片上传','#{$field.name}-{$key}');">替换</a>
+															<a href="javascript:(function(){ $('#savedimage{$key}').remove();})();">移除</a>
+														</li>
+													</foreach>
+												</notempty>
+											
+												<script type="text/html" id="files-item-wrapper">
+													<li id="savedfile{id}">
+														<input id="{$field.name}-{id}" type="hidden" name="{$field.name}[]" value="{filepath}"> 
+														<input id="{$field.name}-{id}-name" type="text" name="{$field.name}_alt[]" value="{name}" style="width: 160px;" title="文件名称">
+														<a id="{$field.name}-{id}-preview" href="{url}" onclick="parent.file_preview_dialog(this.href);">{name}</a>
+														<a href="javascript:upload_one_file('文件上传','#{$field.name}-{id}');">替换</a>
+														<a href="javascript:(function(){$('#savedfile{id}').remove();})();">移除</a>
+													</li>
+												</script>
+
+												<ul id="files" class="file-list unstyled"></ul>
+												<a href="javascript:upload_multi_file('文件上传','#files','files-item-wrapper');" class="btn btn-small">选择文件</a>
+											</td>
+										</case>
+									</switch>
+								</tr>
+           					</if>
+            			</volist>
+						<!--<tr>
+							<th width="80">分类</th>
+							<td>
+								<select multiple="multiple" style="max-height: 100px;"name="term[]">{$taxonomys}</select>
+								<div>windows：按住 Ctrl 按钮来选择多个选项,Mac：按住 command 按钮来选择多个选项</div>
+							</td>
+						</tr>
+						<tr>
+							<th>标题</th>
+							<td>
+								<input type="hidden" name="post[id]" value="{$post.id}">
+								<input type="text" style="width: 400px;" name="post[post_title]" required value="{$post.post_title}" placeholder="请输入标题"/>
+								<span class="form-required">*</span>
+							</td>
+						</tr>
+						<tr>
+							<th>关键词</th>
+							<td>
+								<input type="text" name="post[post_keywords]" style="width: 400px" value="{$post['post_keywords']}" placeholder="请输入关键字">
+								多关键词之间用空格或者英文逗号隔开
+							</td>
+						</tr>
+	
+						<tr>
+							<th>文章来源</th>
+							<td>
+								<input type="text" name="post[post_source]" value="{$post['post_source']}" style="width: 400px" placeholder="请输入文章来源">
+							</td>
+						</tr>
+						<tr>
+							<th>摘要</th>
+							<td>
+								<textarea name="post[post_excerpt]" style="width: 98%; height: 50px;" placeholder="请填写摘要">{$post.post_excerpt}</textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>内容</th>
+							<td>
+								<script type="text/plain" id="content" name="post[post_content]">{$post.post_content}</script>
+							</td>
+						</tr>-->
+					</table>
+				</div>
+				<div class="span3">
+					<table class="table table-bordered">
+						<volist name="fields[1]" id="field">
+							<if condition="$field['is_show'] == 1 || $field['is_show'] == 3">
+								<tr>
+										<switch name="field.type">
+											<case value="post_date"><!--发布时间-->
+												<th>{$field['title']}</th>
+												<td>
+												<!--<input type="text" style="width:400px;" name="{$field.name}" id="{$field.name}" required value="{$data[$field['name']]}" placeholder="<notempty name="field['remark']">（{$field['remark']}）</notempty>"/>
+												<span class="form-required">*</span>-->
+
+													<input type="text" name="{$field.name}" value="{:date('Y-m-d H:i:s',time())}" class="js-datetime" style="width: 160px;" placeholder="<notempty name="field['remark']">（{$field['remark']}）</notempty>">
+												</td>
+											</case>
+											<case value="post_status"><!--状态-->
+												<th>{$field['title']}</th>
+												<td>
+													<volist name=":parse_field_attr($field['extra'])" id="vo">
+														<label class="radio">
+															<input type="radio" value="{$key}" name="{$field.name}" <eq name="data[$field['name']]" value="$key">checked="checked"</eq>>{$vo}
+														</label>
+													</volist>
+												</td>
+											</case>
+											<case value="istop"><!--置頂-->
+												<th>{$field['title']}</th>
+												<td>
+													<volist name=":parse_field_attr($field['extra'])" id="vo">
+														<label class="radio">
+															<input type="radio" value="{$key}" name="{$field.name}" <eq name="data[$field['name']]" value="$key">checked="checked"</eq>>{$vo}
+														</label>
+													</volist>
+												</td>
+											</case>
+											<case value="recommended"><!--推舉-->
+												<th>{$field['title']}</th>
+												<td>
+													<volist name=":parse_field_attr($field['extra'])" id="vo">
+														<label class="radio">
+															<input type="radio" value="{$key}" name="{$field.name}" <eq name="data[$field['name']]" value="$key">checked="checked"</eq>>{$vo}
+														</label>
+													</volist>
+												</td>
+											</case>
+										</switch>
+									</td>
+								</tr>
+							</if>
+            			</volist>
+						<!--<tr>
+							<th>发布时间</th>
+						</tr>
+						<tr>
+							<td><input type="text" name="post[post_date]" value="{$post.post_date}" class="js-datetime" style="width: 160px;"></td>
+						</tr>
+						<tr>
+							<th>评论</th>
+						</tr>
+						<tr>
+							<td><label style="width: 88px"><a href="javascript:open_iframe_dialog('{:U('comment/commentadmin/index',array('post_id'=>$post['id']))}','评论列表')">查看评论</a></label>
+							</td>
+						</tr>
+						<tr>
+							<th>状态</th>
+						</tr>
+						<tr>
+							<td>
+								<php>
+									$status_yes=$post['post_status']==1?"checked":"";
+									$status_no=$post['post_status']==0?"checked":"";
+									$istop_yes=$post['istop']==1?"checked":"";
+									$istop_no=$post['istop']==0?"checked":"";
+									$recommended_yes=$post['recommended']==1?"checked":"";
+									$recommended_no=$post['recommended']==0?"checked":""; 
+								</php>
+								<label class="radio"><input type="radio" name="post[post_status]" value="1" {$status_yes}>审核通过</label>
+								<label class="radio"><input type="radio" name="post[post_status]" value="0" {$status_no}>未审核</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="radio"><input type="radio" name="post[istop]" value="1" {$istop_yes}>置顶</label>
+								<label class="radio"><input type="radio" name="post[istop]" value="0" {$istop_no}>未置顶</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="radio"><input type="radio" name="post[recommended]" value="1" {$recommended_yes}>推荐</label>
+								<label class="radio"><input type="radio" name="post[recommended]" value="0" {$recommended_no}>未推荐</label>
+							</td>
+						</tr>
+						<tr>
+							<th>文章模板</th>
+						</tr>
+						<tr>
+							<td>
+								<php>
+									$tpl_list=sp_admin_get_tpl_file_list();
+									unset($tpl_list['page']);
+								</php>
+								<select style="min-width: 190px;" name="smeta[template]">
+									<option value="">请选择模板</option>
+									<foreach name="tpl_list" item="vo">
+										<php>$template_selected=$smeta['template']==$vo?"selected":"";</php>
+										<option value="{$vo}"{$template_selected}>{$vo}{:C("TMPL_TEMPLATE_SUFFIX")}</option>
+									</foreach>
+								</select>
+							</td>
+						</tr>-->
+					</table>
+				</div>
+			</div>
+			<div class="form-actions">
+				<button class="btn btn-primary js-ajax-submit" type="submit">提交</button>
+				<a class="btn" href="{:U($model['name'].'/index')}">返回</a>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+	<script type="text/javascript">
+		//编辑器路径定义
+		var editorURL = GV.WEB_ROOT;
+	</script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			
+			//setInterval(function(){public_lock_renewal();}, 10000);
+			$(".js-ajax-close-btn").on('click', function(e) {
+				e.preventDefault();
+				Wind.use("artDialog", function() {
+					art.dialog({
+						id : "question",
+						icon : "question",
+						fixed : true,
+						lock : true,
+						background : "#CCCCCC",
+						opacity : 0,
+						content : "您确定需要关闭当前页面嘛？",
+						ok : function() {
+							setCookie("refersh_time", 1);
+							window.close();
+							return true;
+						}
+					});
+				});
+			});
+			/////---------------------
+			Wind.use('validate', 'ajaxForm', 'artDialog', function() {
+				//javascript
+				//测试编辑器
+				<volist name="fields[1]" id="field">
+					<switch name="field.type">
+						<case value="editor">
+							editorcontent{$field.name}= new baidu.editor.ui.Editor();
+							editorcontent{$field.name}.render('{$field.name}');
+						</case>
+					</switch>
+				</volist>
+				//编辑器
+//				editorcontent = new baidu.editor.ui.Editor();
+//				editorcontent.render('content');
+//				try {
+//					editorcontent.sync();
+//				} catch (err) {
+//				}
+//				//增加编辑器验证规则
+//				jQuery.validator.addMethod('editorcontent', function() {
+//					try {
+//						editorcontent.sync();
+//					} catch (err) {
+//					}
+//					;
+//					return editorcontent.hasContents();
+//				});
+				var form = $('form.js-ajax-form');
+				//ie处理placeholder提交问题
+				if ($.browser && $.browser.msie) {
+					form.find('[placeholder]').each(function() {
+						var input = $(this);
+						if (input.val() == input.attr('placeholder')) {
+							input.val('');
+						}
+					});
+				}
+				//表单验证开始
+				form.validate({
+					//是否在获取焦点时验证
+					onfocusout : false,
+					//是否在敲击键盘时验证
+					onkeyup : false,
+					//当鼠标掉级时验证
+					onclick : false,
+					//验证错误
+					showErrors : function(errorMap, errorArr) {
+						//errorMap {'name':'错误信息'}
+						//errorArr [{'message':'错误信息',element:({})}]
+						try {
+							$(errorArr[0].element).focus();
+							art.dialog({
+								id : 'error',
+								icon : 'error',
+								lock : true,
+								fixed : true,
+								background : "#CCCCCC",
+								opacity : 0,
+								content : errorArr[0].message,
+								cancelVal : '确定',
+								cancel : function() {
+									$(errorArr[0].element).focus();
+								}
+							});
+						} catch (err) {
+						}
+					},
+					//验证规则
+					rules : {
+						'post[post_title]' : {
+							required : 1
+						},
+						'post[post_content]' : {
+							editorcontent : true
+						}
+					},
+					//验证未通过提示消息
+					messages : {
+						'post[post_title]' : {
+							required : '请输入标题'
+						},
+						'post[post_content]' : {
+							editorcontent : '内容不能为空'
+						}
+					},
+					//给未通过验证的元素加效果,闪烁等
+					highlight : false,
+					//是否在获取焦点时验证
+					onfocusout : false,
+					//验证通过，提交表单
+					submitHandler : function(forms) {
+						$(forms).ajaxSubmit({
+							url : form.attr('action'), //按钮上是否自定义提交地址(多按钮情况)
+							dataType : 'json',
+							beforeSubmit : function(arr, $form, options) {
+
+							},
+							success : function(data, statusText, xhr, $form) {
+								if (data.status) {
+									setCookie("refersh_time", 1);
+									//添加成功
+									Wind.use("artDialog", function() {
+										art.dialog({
+											id : "succeed",
+											icon : "succeed",
+											fixed : true,
+											lock : true,
+											background : "#CCCCCC",
+											opacity : 0,
+											content : data.info,
+											button : [ {
+												name : '继续编辑？',
+												callback : function() {
+													//reloadPage(window);
+													return true;
+												},
+												focus : true
+											}, {
+												name : '返回列表页',
+												callback : function() {
+													location = "{:U('AdminPostConvenience/index?term=74')}";
+													return true;
+												}
+											} ]
+										});
+									});
+								} else {
+									artdialog_alert(data.info);
+								}
+							}
+						});
+					}
+				});
+			});
+			////-------------------------
+		});
+	</script>
+</body>
+</html>
